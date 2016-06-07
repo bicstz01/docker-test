@@ -1,4 +1,6 @@
 node (){
-  echo 'Copying files'
-  sh 'cp -R bartik_one /code_root'
+  echo 'Change directory to code root'
+  dir("/code_root"){}
+  echo 'Pull branch'
+  sh 'git pull'
 }
