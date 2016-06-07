@@ -3,6 +3,6 @@ node (){
   dir("/code_root"){
     echo 'Pull branch'
     echo pwd()
-    sh 'git pull'
+    checkout scm
   }
 }
