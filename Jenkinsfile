@@ -1,12 +1,9 @@
 node (){
   echo 'Starting run'
-  
-  
-    echo 'checkout scm'
-	echo pwd()
-	
-	def workSpaceHome = pwd()
-echo 'Workspace ' + workSpaceHome	
-	
+  stage 'Change directory to code root'
+  dir("/code_root"){
+    stage 'SCM Checkout'
+    checkout scm
+  }
   echo 'End run'
 }
